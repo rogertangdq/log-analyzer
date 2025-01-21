@@ -23,6 +23,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'commons-cli:commons-cli:1.5.0'
 	implementation 'org.apache.commons:commons-csv:1.10.0'
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
 	implementation 'com.google.guava:guava:32.1.2-jre'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

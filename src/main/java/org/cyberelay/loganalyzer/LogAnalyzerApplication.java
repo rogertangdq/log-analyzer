@@ -151,23 +151,23 @@ public class LogAnalyzerApplication implements CommandLineRunner {
 		void output(String filePath) {
 			try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
 				// Write header 1
-				writer.write(padString("Tag") + padString("Count"));
+				writer.write(padString("Tag") + padString("Count") + "\n");
 
 				statsByTag.forEach((tag, count) -> {
                     try {
-                        writer.write(padString(tag) + padString(String.valueOf(count)));
+                        writer.write(padString(tag) + padString(String.valueOf(count)) + "\n");
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
                 });
 
-				writer.write("");
+				writer.write("\n\n");
 				// Write header 2
-				writer.write(padString("Port") + padString("Protocol") + padString("Count"));
+				writer.write(padString("Port") + padString("Protocol") + padString("Count") + "\n");
 
 				statsBySocket.forEach((socket, count) -> {
 					try {
-						writer.write(padString(socket.port) + padString(socket.protocol) + padString(String.valueOf(count)));
+						writer.write(padString(socket.port) + padString(socket.protocol) + padString(String.valueOf(count)) + "\n");
 					} catch (IOException e) {
 						throw new RuntimeException(e);
 					}

@@ -1,1 +1,24 @@
-Tag            Count          untagged       200            Port           Protocol       Count          22             17             17             443            1              8              53             17             15             5000           17             11             8080           1              11             443            17             10             8080           6              16             80             17             11             22             1              10             53             1              9              22             6              11             5000           1              7              53             6              7              80             1              11             5000           6              13             443            6              13             8080           17             12             80             6              8              
+Tag            Count          
+sv_P2          11             
+untagged       189            
+
+
+Port           Protocol       Count          
+53             tcp            11             
+53             udp            10             
+443            icmp           5              
+22             udp            7              
+22             tcp            6              
+5000           tcp            14             
+5000           udp            9              
+80             tcp            20             
+80             udp            13             
+22             icmp           10             
+53             icmp           15             
+8080           icmp           19             
+5000           icmp           11             
+443            tcp            11             
+443            udp            10             
+80             icmp           10             
+8080           tcp            5              
+8080           udp            14             

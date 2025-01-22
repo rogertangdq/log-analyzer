@@ -104,7 +104,7 @@ public class LogStatsCollector {
 
     private HashMultimap<Socket, String> parseLookupTable(String filePath) {
         // For debug purpose. It should be replaced with logging
-        System.out.println("Paring lookup file: " + filePath);
+        System.out.println("Parsing lookup file: " + filePath);
         HashMultimap<Socket, String> result = HashMultimap.create();
 
         try (Reader reader = new FileReader(filePath)) {
@@ -139,8 +139,8 @@ public class LogStatsCollector {
         return StringUtils.rightPad(input, 15, ' ');
     }
 
-    private Set<String> lookupTags(Socket key) {
-        var tags = lookupTable.get(key);
+    private Set<String> lookupTags(Socket socket) {
+        var tags = lookupTable.get(socket);
         return tags.isEmpty() ? Set.of("untagged") : tags;
     }
 }

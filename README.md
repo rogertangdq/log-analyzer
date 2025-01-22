@@ -7,6 +7,7 @@
   - `output=output.txt`
   - `lookup=lookup.txt`
 - To override the default input/output files, run `./gradlew run --args='-i <inputFilePath> -o <outputFilePath> -l <lookupFilePath>'`
+  e.g `./gradlew run --args='-i input.txt -o output.txt -l lookup.txt`
 
 ## What is Cyberelay?
 - **Cyberelay** was a name I created for my Web Portal Server project about 20 years ago, though the project

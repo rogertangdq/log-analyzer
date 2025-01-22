@@ -43,6 +43,8 @@ public class LogStatsCollector {
     public void collect(String inputPath, String filePath) {
         var stats = collectStats(inputPath);
 
+        // For debug purpose. It should be replaced with logging
+        System.out.println("Writing into output file: " + filePath);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             // Write header for Segment 1
             writeline(writer, "Tag", "Count");
@@ -66,12 +68,17 @@ public class LogStatsCollector {
             var line = Arrays.stream(columns).map(this::padString).collect(Collectors.joining());
             writer.write(line);
             writer.write("\n");
+
+            // For debug purpose. It should be replaced with logging
+            System.out.println(line);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
     private Stats collectStats(String logFilePath) {
+        // For debug purpose. It should be replaced with logging
+        System.out.println("Parsing log file: " + logFilePath);
         var result = new Stats();
         try (Reader reader = new FileReader(logFilePath)) {
             CSVFormat.DEFAULT.builder()
@@ -95,6 +102,8 @@ public class LogStatsCollector {
     }
 
     private HashMultimap<Socket, String> parseLookupTable(String filePath) {
+        // For debug purpose. It should be replaced with logging
+        System.out.println("Paring lookup file: " + filePath);
         HashMultimap<Socket, String> result = HashMultimap.create();
 
         try (Reader reader = new FileReader(filePath)) {

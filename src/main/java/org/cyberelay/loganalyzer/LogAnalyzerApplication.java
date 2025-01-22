@@ -24,19 +24,19 @@ public class LogAnalyzerApplication implements CommandLineRunner {
 				.longOpt("input")
 				.desc("input log file path (default: log.csv)")
 				.hasArg(true)
-				//.required(true)
+				.required(true)
 				.build();
 		var output = Option.builder("o")
 				.longOpt("output")
 				.desc("output file path (default: output.txt)")
 				.hasArg(true)
-				//.required(true)
+				.required(true)
 				.build();
 		var lookup = Option.builder("l")
 				.longOpt("lookup")
 				.desc("lookup file path (default: lookup.csv)")
 				.hasArg(true)
-				//.required(true)
+				.required(true)
 				.build();
 		options.addOption(input).addOption(output).addOption(lookup);
 

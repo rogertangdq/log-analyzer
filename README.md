@@ -1,5 +1,5 @@
 ## How to run the application?
-- **Ensure JDK 21 or a later version installed.** as this application is configured with that version. If you haven't 
+- **Ensure JDK 21 or a later version installed** as this application is configured with that version. If you haven't 
   installed it yet, follow [this link](#how-to-install-jdk-21-or-a-later-version) for installation instruction.
 - To start the application, navigate to the project root directory and run `./gradlew run` in your terminal.
   This will launch the application with the default input/output files:

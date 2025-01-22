@@ -40,12 +40,12 @@ public class LogStatsCollector {
         this.lookupTable = parseLookupTable(lookupFilePath);
     }
 
-    public void collect(String inputPath, String filePath) {
+    public void collect(String inputPath, String outputPath) {
         var stats = collectStats(inputPath);
 
         // For debug purpose. It should be replaced with logging
-        System.out.println("Writing into output file: " + filePath);
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+        System.out.println("Writing into output file: " + outputPath);
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath))) {
             // Write header for Segment 1
             writeline(writer, "Tag", "Count");
             // Write data for Segment 1

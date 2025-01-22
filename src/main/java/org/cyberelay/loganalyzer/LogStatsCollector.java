@@ -84,6 +84,7 @@ public class LogStatsCollector {
             CSVFormat.DEFAULT.builder()
                     .setHeader()
                     .setSkipHeaderRecord(true) // The header row is skipped
+                    .setIgnoreHeaderCase(true)
                     .build()
                     .parse(reader)
                     .forEach(record -> {
@@ -110,6 +111,7 @@ public class LogStatsCollector {
             CSVFormat.DEFAULT.builder()
                     .setHeader()
                     .setSkipHeaderRecord(true) // Optional: skip the header row
+                    .setIgnoreHeaderCase(true)
                     .build()
                     .parse(reader)
                     .forEach(record -> {
